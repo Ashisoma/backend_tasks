@@ -9,8 +9,10 @@ const port = process.env.PORT || 3000;
 // import db connection
 const connectDatabase = require('./src/db/db');
 
+const isAuthenticated = require('./src/middlewares/authenticateToken')
 
 const apiRouting = require("./src/routes/tasksRouting");
+const authRouting = require("./src/routes/userRouting");
 
 // connect to db
 connectDatabase();
@@ -37,5 +39,9 @@ app.use((req, res, next)=>{
     res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
     next();
 });
-
+// tasks routing
+// authenticated api key routing below
 app.use("/api/v1", apiRouting);
+
+// auth routes
+app.use("/auth", authRouting);
