@@ -12,7 +12,6 @@ const tasksSchema = mongoose.Schema(
         },
         status:{
             type: Boolean,
-            required: [true, 'Status is missing']
         }
     },
     {
