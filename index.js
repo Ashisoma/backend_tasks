@@ -3,7 +3,7 @@ const app = express();
 const xss = require('xss-clean');
 require('dotenv').config();
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 5000;
 
 
 // import db connection
@@ -28,7 +28,7 @@ app.use(
     })
 );
 
-app.listen(port, () => console.log(`Server running on port ${port}`));
+// app.listen(port, () => console.log(`Server running on port ${port}`));
 
 // SET HEADERS 
 app.use((req, res, next)=>{
@@ -45,3 +45,5 @@ app.use("/api/v1", apiRouting);
 
 // auth routes
 app.use("/auth", authRouting);
+
+module.exports = app;

@@ -9,7 +9,7 @@ const connectDatabase = async () => {
             useUnifiedTopology :true
         })
         
-        console.log(`MongoDb connected: ${connect.connection.host}`)
+        // console.log(`MongoDb connected: ${connect.connection.host}`)
     } catch (error) {
         // Catch connection to mongo error
         console.error(`Error connecting to Mongo Database: ${error.message}` );
