@@ -3,7 +3,6 @@ const User = require('../models/user');
 require('dotenv').config();
 const asyncHandler = require('express-async-handler');
 const bcrypt = require('bcrypt')
-const base64 = require('base-64')
 
 const jwt = require('jsonwebtoken');
 
