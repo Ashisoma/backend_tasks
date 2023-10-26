@@ -41,7 +41,7 @@ app.use((req, res, next)=>{
 });
 // tasks routing
 // authenticated api key routing below
-app.use("/api/v1", apiRouting);
+app.use("/", apiRouting);
 
 // auth routes
 app.use("/auth", authRouting);
