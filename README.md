@@ -36,20 +36,32 @@ Use the project as a playground for your api tests or as code snippets for your 
 
 ## API Endpoints
 
-If your project includes an API, list and describe the available endpoints, request methods, and expected responses. You can format this section like a table or use bullet points.
-
-Example:
-
-- `GET /api/tasks`: Retrieve a list of tasks.
+- `GET /tasks`: Retrieve a list of tasks.
   - Request: None
   - Response: JSON array of tasks
-- `GET /api/tasks/:id`: Retrieve a task.
+- `GET /tasks/:id`: Retrieve a task.
   - Request: None
   - Response: JSON response of task body  
 
-- `POST /api/tasks`: Create a new task.
+- `POST /tasks`: Create a new task.
   - Request: JSON object with task details
   - Response: JSON object with the created task
+
+- `PUT /tasks/:id`: Update task.
+  - Request: JSON object with task details
+  - Response: JSON object with the task
+    
+- `POST /auth/register`: Register a user.
+  - Request: None
+  - Response: Jwt token and user id
+    
+- `POST /auth/login`: Log in user.
+  - Request: None
+  - Response: Jwt token  
+
+- `DELETE /tasks`: Delete a  task.
+  - Request: None
+  - Response: 200 
 
 ## Technologies Used
 
